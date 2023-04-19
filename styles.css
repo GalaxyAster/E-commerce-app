@@ -268,6 +268,7 @@ button:active{
 
 .highlights__wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight{
@@ -275,7 +276,6 @@ button:active{
     width: calc(100% / 3);
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -295,6 +295,12 @@ button:active{
     border-radius: 4px;
     font-size: 36px;
     margin-bottom: 24px;
+}
+
+.highlight__subtitle{
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 /*Features*/
@@ -400,12 +406,45 @@ footer{
     padding: 0 8px;
 }
 
+/*Small Phones, Tablets, large Smartphones*/
+@media (max-width:768px) {
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    button{
+        font-size: 18px;
+    }
+
+    .book{
+        width: 50%;
+    }
+
+
+}
+
 @media (max-width: 550px) {
     .nav__links {
         display: none;
     }
 
+    .highlight{
+        width: 100%;
+    }
+
     .btn__menu{
         display: block;
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
     }
 }
